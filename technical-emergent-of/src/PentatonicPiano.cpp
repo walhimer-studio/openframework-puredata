@@ -1,5 +1,6 @@
 #include "PentatonicPiano.h"
 #include <algorithm>
+#include <map>
 
 namespace {
 
@@ -88,7 +89,7 @@ bool PentatonicPiano::playNote(const std::string& noteName, float velocity) {
 	auto pit = players_.find(base);
 	if (pit == players_.end()) return false;
 	pit->second.setSpeed(rate);
-	float v = std::max(0.f, std::min(1.f, velocity));
+	const float v = std::clamp(velocity, 0.f, 1.f);
 	pit->second.setVolume(masterVolume_ * v);
 	pit->second.play();
 	return true;

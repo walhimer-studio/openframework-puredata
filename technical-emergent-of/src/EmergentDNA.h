@@ -164,7 +164,7 @@ inline TechnicalTraits expressTechnicalTraits(SeedRng& rng) {
 	t.microTickCount = rng.randInt(40, 130);
 
 	t.gridDivMin = static_cast<float>(rng.range(5.f, 12.f));
-	t.gridDivMax = std::max(t.gridDivMin + 2.f, static_cast<float>(rng.range(14.f, 30.f)));
+	t.gridDivMax = std::max<float>(t.gridDivMin + 2.f, static_cast<float>(rng.range(14.0, 30.0)));
 
 	switch (t.styleId) {
 	case 0:
