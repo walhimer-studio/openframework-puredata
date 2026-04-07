@@ -74,7 +74,7 @@ void PentatonicPiano::loadSamples(const std::string& soundsSubdir) {
 			continue;
 		}
 		ofSoundPlayer p;
-		p.load(full);
+		p.load(of::filesystem::path(full));
 		p.setMultiPlay(true);
 		p.setVolume(masterVolume_);
 		players_[base] = std::move(p);
@@ -89,7 +89,12 @@ bool PentatonicPiano::playNote(const std::string& noteName, float velocity) {
 	auto pit = players_.find(base);
 	if (pit == players_.end()) return false;
 	pit->second.setSpeed(rate);
-	const float v = std::clamp(velocity, 0.f, 1.f);
+	float v = velocity;
+	if (v < 0.f) {
+		v = 0.f;
+	} else if (v > 1.f) {
+		v = 1.f;
+	}
 	pit->second.setVolume(masterVolume_ * v);
 	pit->second.play();
 	return true;
