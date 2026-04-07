@@ -181,7 +181,7 @@
 				"E660CC03-71F9-4AF5-A605-B987B2D899C2" /* ofxOsc */,
 			);
 			name = addons;
-			path = ../../../addons;
+			path = addons;
 			sourceTree = SOURCE_ROOT;
 		};
 		E4B69B4A0A3A1720003C02F2 = {
@@ -397,13 +397,13 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
-					../../../addons/ofxOsc/libs,
-					../../../addons/ofxOsc/libs/oscpack,
-					../../../addons/ofxOsc/libs/oscpack/src,
-					../../../addons/ofxOsc/libs/oscpack/src/ip,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../addons/ofxOsc/libs/oscpack/src/osc,
-					../../../addons/ofxOsc/src,
+					addons/ofxOsc/libs,
+					addons/ofxOsc/libs/oscpack,
+					addons/ofxOsc/libs/oscpack/src,
+					addons/ofxOsc/libs/oscpack/src/ip,
+					addons/ofxOsc/libs/oscpack/src/ip/posix,
+					addons/ofxOsc/libs/oscpack/src/osc,
+					addons/ofxOsc/src,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -425,13 +425,13 @@
 					"$(OF_CORE_HEADERS)",
 					src,
 					src,
-					../../../addons/ofxOsc/libs,
-					../../../addons/ofxOsc/libs/oscpack,
-					../../../addons/ofxOsc/libs/oscpack/src,
-					../../../addons/ofxOsc/libs/oscpack/src/ip,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../addons/ofxOsc/libs/oscpack/src/osc,
-					../../../addons/ofxOsc/src,
+					addons/ofxOsc/libs,
+					addons/ofxOsc/libs/oscpack,
+					addons/ofxOsc/libs/oscpack/src,
+					addons/ofxOsc/libs/oscpack/src/ip,
+					addons/ofxOsc/libs/oscpack/src/ip/posix,
+					addons/ofxOsc/libs/oscpack/src/osc,
+					addons/ofxOsc/src,
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -439,7 +439,6 @@
 					"$(OF_CORE_FRAMEWORKS)",
 					"$(LIB_OF_RELEASE)",
 				);
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
 		};

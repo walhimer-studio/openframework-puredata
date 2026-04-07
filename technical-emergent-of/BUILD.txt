@@ -1,17 +1,21 @@
-technical-emergent-of ù openFrameworks app
+technical-emergent-of ó openFrameworks app
 ==========================================
 
-1. Install openFrameworks (https://openframeworks.cc/download/).
+GitHub is the chronicle: clone walhimer-studio/openframework-puredata, then work inside
+technical-emergent-of/. You do not need to copy this folder into OF/apps/myApps/.
 
-2. Copy this folder into your oF tree:
-     openFrameworks/apps/myApps/technical-emergent-of
+1. Install openFrameworks 0.12.x for macOS (https://openframeworks.cc/download/).
 
-3. Generate a project for your platform (replace OF_ROOT with your path):
-   - macOS: use projectGenerator.app, point to this folder, add addon ofxOsc (listed in addons.make).
-   - Or from scripts/: ./projectGenerator -o"OF_ROOT" apps/myApps/technical-emergent-of -a ofxOsc
+2. Set your OF install path in Project.xcconfig: OF_PATH and the #include line for
+   CoreOF.xcconfig (same folder). Set OF_ROOT in config.make to match if you use make.
 
-4. Add source files if the generator did not pick them up:
-   - src/main.cpp, ofApp.cpp, PentatonicPiano.cpp
+3. ofxOsc is vendored in addons/ofxOsc (committed) so Xcode finds sources after clone.
+   For command-line make, symlink or copy that folder to YOUR_OF_ROOT/addons/ofxOsc
+   (or keep a full OF tree and point OF_ROOT at it).
+
+4. Build (from technical-emergent-of/):
+     xcodebuild -project technical-emergent-of.xcodeproj -scheme "technical-emergent-of Debug" -configuration Debug build
+   Or open technical-emergent-of.xcodeproj in Xcode.
 
 5. Build and run. Place piano WAV samples under:
      bin/data/sounds/
