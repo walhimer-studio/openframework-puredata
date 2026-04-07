@@ -1,0 +1,33 @@
+technical-emergent-of  openFrameworks app
+==========================================
+
+1. Install openFrameworks (https://openframeworks.cc/download/).
+
+2. Copy this folder into your oF tree:
+     openFrameworks/apps/myApps/technical-emergent-of
+
+3. Generate a project for your platform (replace OF_ROOT with your path):
+   - macOS: use projectGenerator.app, point to this folder, add addon ofxOsc (listed in addons.make).
+   - Or from scripts/: ./projectGenerator -o"OF_ROOT" apps/myApps/technical-emergent-of -a ofxOsc
+
+4. Add source files if the generator did not pick them up:
+   - src/main.cpp, ofApp.cpp, PentatonicPiano.cpp
+
+5. Build and run. Place piano WAV samples under:
+     bin/data/sounds/
+   Required filenames (Salamander Grand or your own), matching the HTML prototype:
+   A2.wav Ds2.wav Fs2.wav C2.wav C3.wav Ds3.wav Fs3.wav A3.wav C4.wav Ds4.wav Fs4.wav A4.wav
+   C5.wav Ds5.wav Fs5.wav A5.wav C6.wav Ds6.wav
+
+6. Keys:
+   o      Toggle OSC to Pd vs local WAV playback
+   Space  New random seed (non-deterministic)
+   R      Regenerate same seed
+   N      Increment seed by 1 and regenerate
+
+Seeded RNG matches github.com/walhimer-studio/EmergentDNA SeedRng (sin-based next()).
+
+Pure Data (pd/)
+---------------
+See pd/README.txt. Run pd/setup-samples.sh, install iemnet (Deken), open pd/main-osc.pd
+before or after starting the oF app. OSC: oF -> Pd port 9000 /from-of, Pd -> oF port 9001 /to-of-rms.

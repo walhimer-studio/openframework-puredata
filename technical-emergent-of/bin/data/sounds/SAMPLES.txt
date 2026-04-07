@@ -1,0 +1,22 @@
+Drop one WAV per line below into this folder (names must match exactly):
+
+A2.wav
+Ds2.wav
+Fs2.wav
+C2.wav
+C3.wav
+Ds3.wav
+Fs3.wav
+A3.wav
+C4.wav
+Ds4.wav
+Fs4.wav
+A4.wav
+C5.wav
+Ds5.wav
+Fs5.wav
+A5.wav
+C6.wav
+Ds6.wav
+
+Salamander Grand Piano (CC BY) is a common source; export or convert to WAV mono/stereo as needed.
