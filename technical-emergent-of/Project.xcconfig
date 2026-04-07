@@ -23,6 +23,8 @@ PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.${TARGET_NAME:rfc1034identifier}
 //PRODUCT_BUNDLE_IDENTIFIER[config=Debug] = cc.openFrameworks.$(TARGET_NAME)Debug
 DEVELOPMENT_LANGUAGE = English
 CODE_SIGN_IDENTITY = -
+// Local Debug: if CodeSign still fails (Keychain / ad-hoc), skip signing; Run from Xcode still works.
+CODE_SIGNING_ALLOWED[config=Debug] = NO
 INFOPLIST_FILE = openFrameworks-Info.plist
 GENERATE_INFOPLIST_FILE = YES
 
