@@ -55,6 +55,10 @@ const std::vector<std::string>& PentatonicPiano::pentatonicFiveDegreePool() {
 	return five;
 }
 
+bool PentatonicPiano::isReady() const {
+	return !players_.empty();
+}
+
 void PentatonicPiano::loadSamples(const std::string& soundsSubdir) {
 	players_.clear();
 	std::map<std::string, bool> seen;
