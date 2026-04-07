@@ -12,7 +12,7 @@
 #X obj 40 370 dac~;
 #X obj 320 290 env~ 2048;
 #X obj 320 340 snapshot~ 50;
-#X obj 320 250 metro 50 1;
+#X obj 320 250 metro 50 ms;
 #X obj 320 390 oscformat /to-of-rms f;
 #X obj 320 430 udpsend;
 #X obj 560 130 loadbang;
