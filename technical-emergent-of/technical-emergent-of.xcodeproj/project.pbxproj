@@ -175,15 +175,6 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		BB4B014C10F69532006C3DED /* addons */ = {
-			isa = PBXGroup;
-			children = (
-				"E660CC03-71F9-4AF5-A605-B987B2D899C2" /* ofxOsc */,
-			);
-			name = addons;
-			path = addons;
-			sourceTree = SOURCE_ROOT;
-		};
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +183,7 @@
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				191EF70929D778A400F35F26 /* openFrameworks */,
-				BB4B014C10F69532006C3DED /* addons */,
+				"E660CC03-71F9-4AF5-A605-B987B2D899C2" /* ofxOsc */,
 				E4B69B5B0A3A1756003C02F2 /* technical-emergent-ofDebug.app */,
 				"63E47A9C-4282-41C6-BB09-E5866183CF87" /* data */,
 			);
@@ -217,8 +208,9 @@
 				"6C2F3F84-51AC-4379-99CA-B25417E94B82" /* libs */,
 				"B94B0489-BBB0-4688-A766-DBCA08C5A3A1" /* src */,
 			);
-			path = ofxOsc;
-			sourceTree = "<group>";
+			name = ofxOsc;
+			path = addons/ofxOsc;
+			sourceTree = SOURCE_ROOT;
 		};
 		"F116D09A-2189-41C0-AB60-9045C0802E5C" /* ip */ = {
 			isa = PBXGroup;
