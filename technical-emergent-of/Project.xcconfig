@@ -11,6 +11,11 @@ CLANG_CXX_LANGUAGE_STANDARD = c++23
 CLANG_C_LANGUAGE_STANDARD = c17
 MACOSX_DEPLOYMENT_TARGET = 11.5
 
+// After CoreOF: ad-hoc signing (CODE_SIGN_IDENTITY = -) often fails with entitlements + --deep.
+// Clear both so local Debug/Release builds code-sign reliably on Xcode 15+.
+CODE_SIGN_ENTITLEMENTS =
+OTHER_CODE_SIGN_FLAGS =
+
 // App Settings
 PRODUCT_NAME = $(TARGET_NAME)
 PRODUCT_NAME[config=Debug] = $(TARGET_NAME)Debug
